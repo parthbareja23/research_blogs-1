@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Research Blogs</title>
+</head>
+<body>
+
+<h1>Blog Posts</h1>
+
+<a href="/create/">Add New Post</a>
+
+<hr>
+
+{% for post in posts %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    <small>{{ post.created_on }}</small>
+    <hr>
+{% empty %}
+    <h3>No Posts Available</h3>
+{% endfor %}
+
+</body>
+</html>
